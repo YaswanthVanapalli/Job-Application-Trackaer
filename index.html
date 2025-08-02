@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Application Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1>📋 Job Application Tracker</h1>
+
+        <div class="toolbar">
+            <button onclick="exportToCSV()">⬇️ Export CSV</button>
+            <button onclick="toggleDarkMode()">🌓 Toggle Dark Mode</button>
+        </div>
+
+        <form id="jobForm">
+            <input type="text" id="company" placeholder="Company Name" required />
+            <input type="text" id="role" placeholder="Role" required />
+            <input type="date" id="date" required />
+            <select id="status">
+                <option value="Applied">Applied</option>
+                <option value="Interview">Interview</option>
+                <option value="Offer">Offer</option>
+                <option value="Rejected">Rejected</option>
+            </select>
+            <textarea id="notes" placeholder="Notes..."></textarea>
+            <button type="submit">Add Job</button>
+        </form>
+
+        <div class="jobs" id="jobsList"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
